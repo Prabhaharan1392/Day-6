@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    class movie {
+        constructor(title,studio,rating){
+        this.title = title;
+        this.studio = studio;
+        this.rating = rating;
+
+        if(rating===null) {
+            return this.rating = "PG"
+        }
+        else{
+            return this.rating = rating;
+        }
+}
+      getPG(array){
+        var result = array.filter((element)=> element.rating =="PG")
+        return result
+      }
+ 
+    }
+
+    let movie1 = new movie ("Vikram","rajkamal studios","PG1");
+    let movie2 = new movie ("Casino Royale","Eon Productions","PG13");
+    let movie3 = new movie ("A","red studios");
+    let movie4 = new movie ("B","pink studios");
+
+    let array = [movie1,movie2,movie3,movie4]
+
+    document.write(movie1.getPG(array));
+    document.write(movie2.getPG(array));
+    document.write(movie3.getPG(array));
+    document.write(movie4.getPG(array));
+    // console.log(movie1.getPG(array));
+    // console.log(movie2.getPG(array));
+    // console.log(movie3.getPG(array));
+    // console.log(movie4.getPG(array));
+</script>
+</body>
+</html>
